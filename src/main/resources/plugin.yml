@@ -1,0 +1,6 @@
+name: GuiManager
+version: '${project.version}'
+main: me.lorenzo.guimanager.GuiManager
+api-version: 1.18
+authors: [ TheLore ]
+description: GuiManager 

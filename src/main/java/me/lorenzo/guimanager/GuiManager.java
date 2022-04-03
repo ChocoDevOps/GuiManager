@@ -4,6 +4,7 @@ package me.lorenzo.guimanager;
 import me.lorenzo.guimanager.content.InventoryContents;
 import me.lorenzo.guimanager.content.InventoryProvider;
 import me.lorenzo.guimanager.opener.InventoryOpener;
+import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Event;
 import org.bukkit.event.inventory.InventoryCloseEvent;
@@ -101,7 +102,9 @@ public class GuiManager {
 
     List<InventoryListener<? extends Event>> getListeners() { return listeners; }
 
-    public static Builder builder() { return new Builder(); }
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public static final class Builder {
 
@@ -126,7 +129,7 @@ public class GuiManager {
         }
 
         public Builder title(String title) {
-            this.title = title;
+            this.title = ChatColor.translateAlternateColorCodes('&', title);
             return this;
         }
 

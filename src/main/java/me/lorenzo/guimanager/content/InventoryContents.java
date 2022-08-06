@@ -178,7 +178,7 @@ public interface InventoryContents {
         public InventoryContents fillIfEmpty(ClickableItem item) {
             for(int row = 0; row < contents.length; row++)
                 for(int column = 0; column < contents[row].length; column++)
-                    if(get(row, column).isPresent()) {
+                    if(!get(row, column).isPresent()) {
                         set(row, column, item);
                     }
 
